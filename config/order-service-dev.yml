@@ -6,8 +6,9 @@ spring:
     host: 192.168.64.5
     port: 5672
     username: admin
-    password: admin    
-#server:#  port: 8201
+    password: admin  
+      
+server:  port: 8201
   
 eureka:
   client:
@@ -18,10 +19,4 @@ feign:  hystrix:    enabled: true
 
 management:  endpoints:    web:      exposure:        include: hystrix.stream
 
----
-spring:  profiles: order1
-server:  port: 8201
----
-spring:  profiles: order2
-server:  port: 8202
 
